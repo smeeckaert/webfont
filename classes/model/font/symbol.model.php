@@ -5,8 +5,8 @@ namespace Dev\Webfont;
 
 class Model_Font_Symbol extends \Nos\Orm\Model
 {
-    protected static $_primary_key = array('font_id');
-    protected static $_table_name = 'dev_font';
+    protected static $_primary_key = array('fosy_id');
+    protected static $_table_name = 'dev_font_symbol';
 
     protected static $_properties = array(
         'fosy_id',
@@ -15,7 +15,7 @@ class Model_Font_Symbol extends \Nos\Orm\Model
         'fosy_character'
     );
 
-    protected static $_title_property = 'font_name';
+    protected static $_title_property = 'fosy_character';
 
     protected static $_observers = array();
 
