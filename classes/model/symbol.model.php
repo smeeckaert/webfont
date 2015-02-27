@@ -7,6 +7,7 @@ namespace Dev\Webfont;
  *
  * @property int                            symb_id
  * @property string                         symb_name
+ * @property string                         symb_folder
  * @property \Dev\Webfont\Model_Font_Symbol font_symbol
  * @package Dev\Webfont
  */
@@ -18,6 +19,7 @@ class Model_Symbol extends \Nos\Orm\Model
     protected static $_properties = array(
         'symb_id',
         'symb_name',
+        'symb_folder'
     );
 
     protected static $_title_property = 'symb_name';
