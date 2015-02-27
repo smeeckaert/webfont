@@ -2,7 +2,14 @@
 
 namespace Dev\Webfont;
 
-
+/**
+ * Class Model_Font
+ *
+ * @property int                            font_id
+ * @property string                         font_name
+ * @property \Dev\Webfont\Model_Font_Symbol font_symbol
+ * @package Dev\Webfont
+ */
 class Model_Font extends \Nos\Orm\Model
 {
     protected static $_primary_key = array('font_id');

@@ -3,6 +3,15 @@
 namespace Dev\Webfont;
 
 
+/**
+ * Class Model_Font_Symbol
+ *
+ * @property int                       fosy_id
+ * @property string                    fosy_character
+ * @property \Dev\Webfont\Model_Symbol symbol
+ * @property \Dev\Webfont\Model_Font   font
+ * @package Dev\Webfont
+ */
 class Model_Font_Symbol extends \Nos\Orm\Model
 {
     protected static $_primary_key = array('fosy_id');
@@ -10,8 +19,6 @@ class Model_Font_Symbol extends \Nos\Orm\Model
 
     protected static $_properties = array(
         'fosy_id',
-        'fosy_font_id',
-        'fosy_symb_id',
         'fosy_character'
     );
 

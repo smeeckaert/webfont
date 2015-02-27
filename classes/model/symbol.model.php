@@ -2,7 +2,14 @@
 
 namespace Dev\Webfont;
 
-
+/**
+ * Class Model_Symbol
+ *
+ * @property int                            symb_id
+ * @property string                         symb_name
+ * @property \Dev\Webfont\Model_Font_Symbol font_symbol
+ * @package Dev\Webfont
+ */
 class Model_Symbol extends \Nos\Orm\Model
 {
     protected static $_primary_key = array('symb_id');

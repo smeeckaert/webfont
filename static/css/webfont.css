@@ -1,0 +1,7 @@
+.webfont {
+    padding : 20px;
+}
+
+.webfont .selector form {
+    display : inline-block;
+}
