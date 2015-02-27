@@ -33,14 +33,14 @@ class Model_Font_Symbol extends \Nos\Orm\Model
             'key_from'       => 'fosy_font_id',
             'model_to'       => '\Dev\Webfont\Model_Font',
             'key_to'         => 'font_id',
-            'cascade_save'   => true,
+            'cascade_save'   => false,
             'cascade_delete' => false,
         ),
         'symbol' => array(
             'key_from'       => 'fosy_symb_id',
             'model_to'       => '\Dev\Webfont\Model_Symbol',
             'key_to'         => 'symb_id',
-            'cascade_save'   => true,
+            'cascade_save'   => false,
             'cascade_delete' => false,
         ),
 
