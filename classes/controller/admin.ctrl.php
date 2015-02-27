@@ -89,7 +89,7 @@ class Controller_Admin extends \Nos\Controller_Admin_Application
         $data = array('replaceTab' => 'admin/webfont/home');
         try {
             Model_Symbol::insertSymbolsInDB();
-            $data['notify'] = __('Font updated');
+            $data['notify'] = __('Symbols updated');
         } catch (\Exception $e) {
             $data['error'] = $e->getMessage();
         }

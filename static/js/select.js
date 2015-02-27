@@ -13,9 +13,9 @@ define(['jquery-nos'], function ($) {
             delete fontsIcons[fontId][symbId];
         }
         $container.nosAjax({
-            type: 'POST',
-            data: data,
-            url : "admin/webfont/select"
+            type   : 'POST',
+            data   : data,
+            url    : "admin/webfont/select"
         });
     }
 
