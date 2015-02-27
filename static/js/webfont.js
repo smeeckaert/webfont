@@ -21,6 +21,12 @@ define(['jquery-nos'], function ($) {
             return false;
         });
 
+        $container.find('.import-font').bind('click', function () {
+            $container.nosAjax({
+                type: 'POST',
+                url : "admin/webfont/refresh"
+            });
+        });
     }
 
 

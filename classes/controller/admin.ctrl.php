@@ -11,8 +11,11 @@ class Controller_Admin extends \Nos\Controller_Admin_Application
     {
         $class   = new SVGFont();
         $config  = \Config::load('webfont::webfont', true);
-        $symbols = Model_Symbol::find('all');
-        $fonts   = Model_Font::find('all');
+        $symbols = Model_Symbol::query()
+            ->order_by('symb_folder', "ASC")
+            ->get();
+        $fonts   = Model_Font::query()
+            ->get();
         return \View::forge('webfont::admin/home', array('config' => $config, 'symbols' => $symbols, 'fonts' => $fonts));
     }
 
@@ -21,4 +24,15 @@ class Controller_Admin extends \Nos\Controller_Admin_Application
         return \Response::json(array('notify' => __('Font created'), 'replaceTab' => 'admin/webfont/home'));
     }
 
+    public function action_refresh()
+    {
+        $data = array('replaceTab' => 'admin/webfont/home');
+        try {
+            Model_Symbol::insertSymbolsInDB();
+            $data['notify'] = __('Font updated');
+        } catch (\Exception $e) {
+            $data['error'] = $e->getMessage();
+        }
+        return \Response::json($data);
+    }
 }

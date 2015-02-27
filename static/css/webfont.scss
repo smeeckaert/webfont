@@ -1,20 +1,45 @@
+@mixin transition($target : all, $time : 0.2s, $mode : ease-in-out) {
+
+    transition-property        : $target;
+    transition-duration        : $time;
+    transition-timing-function : $mode;
+}
+
+$blue : #CFD8DC;
+$blue300 : #90A4AE;
+
 .webfont {
     padding : 20px;
-}
+    .selector form {
+        display : inline-block;
+    }
+    .symbol-list {
+        margin-top : 30px;
+        li {
 
-.webfont .selector form {
-    display : inline-block;
-}
+            .symbol {
+                cursor  : pointer;
+                border  : 1px solid transparent;
+                padding : 5px;
+                @include transition();
 
-.webfont .symbol-list {
-    margin-top : 30px;
-}
+                &:hover {
+                    border : 1px solid $blue;
+                }
+                svg {
+                    margin-top : 5px;
+                    width      : 100%;
+                    height     : 30px;
+                }
 
-.webfont .symbol-list .li {
-
-}
-
-.webfont .symbol-list li svg {
-    width  : 100%;
-    height : 30px;
+            }
+            input[type="checkbox"] {
+                display : none;
+            }
+            input[type="checkbox"]:checked + label .symbol {
+                background : $blue;
+                border     : 1px solid $blue300;
+            }
+        }
+    }
 }

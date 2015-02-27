@@ -10,8 +10,14 @@ return array(
         ),
     'input'       => array(
         'symbols' => array(
-            realpath(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'symbols')
-        )
+            'folders'    => array(
+                realpath(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'symbols')
+            ),
+            'extensions' => array(
+                'svg'
+            )
+        ),
+
     ),
     'font'        => array(
         'types' =>
